@@ -1,24 +1,47 @@
+/* Fondo general del body */
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('./imgs/abrOMB5.jpg'); /* ← Usa tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
 
+/* Contenedor principal */
 .pokemon-container {
   font-family: 'Arial', sans-serif;
   text-align: center;
-  padding: 40px 20px;
-  background-color: #f5f5f5;
+  padding: 120px 20px 40px; /* ← Aumentamos espacio arriba */
+  background-color: rgba(255, 255, 255, 0.1); /* ← Muy leve para que no tape el fondo */
   min-height: 100vh;
+  backdrop-filter: blur(2px); /* ← Suaviza fondo detrás del contenido */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
+/* Título del Randomizer */
 .pokemon-container h2 {
-  color: #222;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
   margin-bottom: 30px;
-  font-size: 2.2em;
+  font-size: 2.5em;
 }
 
+/* Filtro de tipos de Pokémon */
 .filtro-container {
   margin-bottom: 20px;
   font-weight: bold;
-  color: #555;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
+/* Botón Random */
 .random-button {
   background-color: #1f7aed;
   color: white;
@@ -28,12 +51,14 @@
   margin-bottom: 20px;
   cursor: pointer;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .random-button:hover {
   background-color: #155fcc;
 }
 
+/* Lista de Pokémon */
 .pokemon-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -42,10 +67,11 @@
   width: 100%;
 }
 
+/* Tarjetas de Pokémon */
 .pokemon-card {
   background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -57,6 +83,7 @@
   transform: scale(1.05);
 }
 
+/* Imagen de Pokémon */
 .pokemon-img {
   width: 100%;
   max-width: 120px;
@@ -65,6 +92,7 @@
   object-fit: contain;
 }
 
+/* Contenido debajo de la imagen */
 .pokemon-card-content {
   background-color: #e8e8e8;
   width: 100%;

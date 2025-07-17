@@ -62,7 +62,7 @@ const PokemonFetcher = () => {
 
   return (
     <div className="pokemon-container">
-      <h2>Randomize Pokemon Equip</h2>
+      <h2>Randomizer Legendary Equip</h2>
       <div className="filtro-container">
         <label htmlFor="tipo-select">Filtrar por tipo: </label>
         <select
